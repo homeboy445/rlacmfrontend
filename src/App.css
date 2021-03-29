@@ -1,38 +1,380 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Roboto+Mono:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&family=Raleway:wght@500&display=swap');
+.mainer
+{
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.mainer
+{
+  background:white;
+  min-height:100vh;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button{
+  outline:none;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+.mainer .login
+{
+  display:flex;
+  flex-direction:column;
+  align-items:left;
+  justify-content:left;
+  margin:10%;
+  width:60%;
+}
+.login h1
+{
+  font-size:3rem;
+  margin-bottom:25%;
+  font-family: 'Roboto Mono', monospace;
+}
+.login input
+{
+  width:300px;
+  font-family: 'IBM Plex Mono', monospace;
+  height:30px;
+  border:none;
+  border-bottom: 2px solid black;
+  outline:none;
+  font-size:1.4rem;
+  margin-top:14%;
+  transition:0.5s ease;
+}
+.login input:focus
+{
+  border-color:cyan;
+}
+.image
+{
+  width:50%;
+  height:50%;
+  margin-left:10%;
+  /* border:2px solid black; */
+}
+.login button
+{
+  width:50%;
+  margin-top:16%;
+  font-size:1.5rem;
+  font-family: 'IBM Plex Mono', monospace;
+  background-color: #0093E9;
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+  color:white;
+  border:2px solid blue;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px black;
+  transition:0.5s ease;
+  cursor:pointer;
+}
+.login button:hover
+{
+  box-shadow: 0.4px 0.4px 0.4px black;
+}
+.login a
+{
+  margin-top:10%;
+  color:blue;
+  cursor:pointer;
+  transition:0.4s ease;
+}
+.login a:hover
+{
+  transform:scale(1.02);
+}
+.home
+{
+  display:flex;
   flex-direction: column;
+  justify-content:center;
   align-items: center;
+  margin-top:10%;
+  color:white;
+  text-shadow: 2px 2px 2px black;
+}
+.home h1
+{
+  font-size:3rem;
+  font-family: 'Quicksand', sans-serif;
+}
+.home h2
+{
+  font-family: 'Quicksand', sans-serif;
+}
+.home .tkme
+{
+  width:15%;
+  background:blue;
+  font-size:1.4rem;
+  border-radius:4px;
+  margin:5%;
+  cursor:pointer;
+  color:white;
+  border:2px solid cyan;
+  font-family: 'IBM Plex Mono', monospace;
+  box-shadow: 2px 2px 2px black;
+  transition:0.4s ease;
+}
+.home .tkme:hover
+{
+  box-shadow: 0.1px 0.1px 0.1px black;
+}
+.rooms
+{
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+  margin:5%;
+  margin-left:10%;
+  color:white;
+  text-shadow:2px 2px 2px black;
+}
+.rooms h1
+{
+  font-size:3rem;
+  margin-bottom:10%;
+  font-family: 'Quicksand', sans-serif;
+}
+.Rmbx
+{
+  display:grid;
+  grid-template-columns:2fr 2fr 2fr;
+  grid-gap:10%;
+}
+.room-box
+{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin:5%;
+  width:100%;
+  padding:10%;
+  border-radius: 5px;
+  border:2px solid black;
+  cursor:pointer;
+  background:rgb(90, 88, 88);
+  color:white;
+  box-shadow:3px 3px 3px black;
+  transition:0.4s ease;
 }
-
-.App-link {
-  color: #61dafb;
+.room-box:hover
+{
+  box-shadow:1px 1px 1px black;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.room-box h2
+{
+  font-size:3rem;
+  font-family: 'Roboto Mono', monospace;
+  margin:4%;
+}
+.req-pop
+{
+  position:absolute;
+  top:5%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  border:2px solid black;
+  width:30%;
+  padding:2%;
+  font-family: 'Quicksand', sans-serif;
+  border-radius: 5px;
+  color:black;
+  text-shadow:1px 1px 1px white;
+  background-color: #8EC5FC;
+  background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+}
+.req-pop h2
+{
+  font-size:2.3rem;
+}
+.req-pop input
+{
+  width:100%;
+  height:25px;
+  font-size:22px;
+  border-radius: 4px;
+}
+.req-pop textarea
+{
+  width:100%;
+  height:60px;
+  font-size:22px;
+}
+.butns
+{
+  display:flex;
+  margin-top:8%;
+}
+.butns button:nth-child(1)
+{
+  margin:2%;
+  width:70%;
+  font-size:1.4rem;
+  border-radius: 4px;
+  cursor: pointer;
+  background:cyan;
+  color:blue;
+  border:2px solid blue;
+  box-shadow:2px 2px 2px black;
+  transition:0.4s ease;
+}
+.butns button:nth-child(2)
+{
+  margin:2%;
+  width:70%;
+  font-size:1.4rem;
+  border-radius: 4px;
+  cursor: pointer;
+  background:red;
+  color:black;
+  border:2px solid black;
+  box-shadow:2px 2px 2px black;
+  transition:0.4s ease;
+}
+.butns button:hover
+{
+  box-shadow:1px 1px 1px black;
+}
+.evt
+{
+  display:flex;
+}
+.evt input
+{
+  width:50%;
+  margin-top:4%;
+  margin-left:2%;
+}
+.rooms a
+{
+  margin:2%;
+  text-shadow:none;
+  color:blue;
+}
+.logOut
+{
+  position:absolute;
+  width:10%;
+  right:4%;
+  top:4%;
+  font-size:2rem;
+  background:green;
+  color:yellow;
+  border:2px solid yellow;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px black;
+  transition:0.4s ease;
+  cursor:pointer;
+}
+.logOut:hover
+{
+  box-shadow: 1px 1px 1px black;
+}
+.ddt
+{
+  margin-left:80%;
+  margin-top:-3%;
+  font-size:1.2rem;
+  font-family: 'Roboto Mono', monospace;
+}
+.logo
+{
+  position:absolute;
+  left:10%;
+  top:-9%;
+}
+.rereq
+{
+  position:fixed;
+  top:30%;
+  display:flex;
+  left:35%;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  border:2px solid black;
+  width:30%;
+  padding:2%;
+  font-family: 'Quicksand', sans-serif;
+  border-radius: 5px;
+  color:black;
+  text-shadow:1px 1px 1px white;
+  background-color: #8EC5FC;
+  background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+}
+.Activity
+{
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  text-shadow:2px 2px 2px black;
+  color:white;
+  align-items:center;
+  margin:5%;
+  font-family: 'Inconsolata', monospace;
+}
+.Activity > h1
+{
+  font-size:3rem;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 4px;
+}
+.Activity > a
+{
+  font-size:2rem;
+  color:blue;
+  text-shadow:none;
+  cursor:pointer;
+  margin:5%;
+}
+.loader
+{
+  position:absolute;
+  border-radius:20%;
+  top:35%;
+  left:45%;
+  width:10%;
+}
+.Inbxlgo
+{
+  width:3%;
+  position:absolute;
+  /* background-color:white; */
+  left:6%;
+  top:4%;
+  border-radius: 4px;
+  cursor:pointer;
+  transition:0.5s ease;
+}
+.Inbxlgo:hover
+{
+  transform:scale(1.2);
+}
+.inbx
+{
+  margin:4%;
+  font-size:2rem;
+}
+.Activity > button
+{
+  margin:2%;
+  width:15%;
+  align-self:center;
+  font-size:1.4rem;
+  border-radius: 4px;
+  cursor: pointer;
+  background:cyan;
+  color:blue;
+  border:2px solid blue;
+  box-shadow:2px 2px 2px black;
+  transition:0.4s ease; 
+}
+.Activity > button:hover
+{
+  box-shadow:0.2px 0.2px 0.2px black;
 }
